@@ -51,8 +51,8 @@ namespace AutomotiveStore.Models
 
                     new Product
                     {
-                        Name = "Szampon do mycia auta o zapachu cytrusów",
-                        Description = "Bezpieczny szampon do mycia samochodów o neutralnym ph roztworu.",
+                        Name = "Aktywna piana do mycia auta o zapachu cytrusów",
+                        Description = "Bezpieczny piana do mycia samochodów o neutralnym ph nie niszcząca lakieru auta.",
                         Category = "Kosmetyki samochodowe",
                         Price = 25
                     },
@@ -79,7 +79,56 @@ namespace AutomotiveStore.Models
                         Description = "Składany trójkąt ostrzegawczy, obowiazkowy element każdego samochodu.",
                         Category = "Akcesoria",
                         Price = 14.99m
-                    }
+                    },
+                     new Product
+                     {
+                         Name = "Sprzęgło",
+                         Description = "do samochodów marki:audi, mercedes, fiat, opel, toyota",
+                         Category = "Części samochodowe",
+                         Price = 399
+                     },
+                      new Product
+                      {
+                          Name = "filtr kabinowy Marki filtron",
+                          Description = "filtr kabinowy pasujący do samochodów marki audi.",
+                          Category = "Filtry",
+                          Price = 45
+                      },
+                       new Product
+                       {
+                           Name = "filtr powietrza",
+                           Description = "filtr uniwersalny",
+                           Category = "Filtry",
+                           Price = 25
+                       },
+                        new Product
+                        {
+                            Name = "zestaw kluczy warsztatowych",
+                            Description = "Zestaw najważniejszych narzędzi potrzebnych w domowym warsztacie. ",
+                            Category = "Akcesoria",
+                            Price = 578
+                        },
+                         new Product
+                         {
+                             Name = "Klocki hamulcowe",
+                             Description = "Zestaw klocków hamulcowych do samochodów marki  ford.",
+                             Category = "Części Samochodowe",
+                             Price = 220
+                         },
+                          new Product
+                          {
+                              Name = "Sportowe zaciski hamulcowe brembo",
+                              Description = "zestaw hamulców renomowanej marki Brembo do samochodów sportowych.",
+                              Category = "Części Samochodowe",
+                              Price = 774
+                          },
+                           new Product
+                           {
+                               Name = "Płyn do mycia felg aluminiowych",
+                               Description = "bezpieczny płyn czyszczenia felg.",
+                               Category = "Kosmetyki samochodowe",
+                               Price = 774
+                           }
 
 
                     );
