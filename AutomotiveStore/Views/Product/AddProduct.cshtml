@@ -1,0 +1,30 @@
+﻿@model AutomotiveStore.Models.Product
+
+<div class="container-fluid" m-3>
+    <h2>Wpisz dane nowego produktu</h2>
+    <form asp-controller="Product" asp-action="Add" method="post">
+        <div class="mb-3">
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <label asp-for="Name">Nazwa</label>
+            <input class="form-control" asp-for="Name" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Description" class="text-danger"></span>
+            <label asp-for="Description">Opis produktu</label>
+            <input class="form-control" asp-for="Description" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Price" class="text-danger"></span>
+            <label asp-for="Price">Cena</label>
+            <input class="form-control" asp-for="Price" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Category" class="text-danger"></span>
+            <label asp-for="Category">Kategoria</label>
+            <input class="form-control" asp-for="Category" />
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Dodaj produkt do sklepu </button>
+        </div>
+    </form>
+</div>

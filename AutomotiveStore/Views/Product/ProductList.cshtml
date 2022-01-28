@@ -1,0 +1,46 @@
+﻿@model ICollection<AutomotiveStore.Models.Product>
+
+<div class="container-fluid m-3">
+    <h2 class="text-center">Lista Produktów</h2>
+    <table class="table">
+        <tr>
+            <td><b>Nazwa produktu</b></td>
+            <td><b>Opis</b></td>
+            <td><b>Kategoria</b></td>
+            <td><b>Cena</b></td>
+            <td><b>Modyfikuj</b></td>
+            <td></td>
+            
+
+
+        </tr>
+
+        
+
+        @foreach (var p in @Model)
+        {
+        <tr>
+            <td>
+                @p.Name
+            </td>
+            <td>
+                @p.Description
+            </td>
+            <td>
+                @p.Category
+            </td>
+            <td>
+                @p.Price
+            </td>
+
+
+
+            <td>
+                 <a class="btn btn-primary" asp-controller="Product" asp-action="EditProduct" asp-route-id="@p.ProductID">Edytuj</a>
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-controller="Product" asp-action="Delete" asp-route-id="@p.ProductID">Usuń</a>
+            </td>
+        </tr>}
+    </table>
+</div>

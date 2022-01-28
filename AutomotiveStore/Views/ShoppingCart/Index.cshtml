@@ -1,0 +1,57 @@
+﻿@model ShoppingCartViewModel
+
+<div class="row checkoutForm">
+    <h2>Twój Koszyk</h2><br />
+ 
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Produkty</th>
+                <th>ilość</th>
+                <th class="text-right">Cena</th>
+                <th class="text-right">Do zapłaty</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.ShoppingCart.shoppingCartItems)
+            {
+            <tr>
+                <td class="text-left">@line.Product.Name</td>
+                <td class="text-center">@line.Amount</td>
+                <td class="text-right">@line.Product.Price.ToString("c")</td>
+                <td class="text-right">
+                    @((line.Amount * line.Product.Price).ToString("c"))
+                </td>
+                <td class="text-center">
+                    <a class="fa fa-trash-alt" asp-controller="ShoppingCart"
+                       asp-action="RemoveFromShoppingCart" asp-route-productId="@line.Product.ProductID" style="color:red">
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Do zapłaty:</td>
+                <td class="text-right">
+                    @Model.ShoppingCartTotal.ToString("c")
+                </td>
+            </tr>
+        </tfoot>
+
+
+
+    </table>
+
+    <div class="container-fluid">
+        <div class="btn-group float-right">
+            <a class="btn btn-danger d-grid justify-content-end" asp-controller="Order" asp-action="Checkout">Kup teraz</a>
+        </div>
+
+        <div class="btn-group float-right mr-2">
+            <a class="btn btn-danger d-grid justify-content-end" asp-controller="Home" asp-action="Index">Kontynuuj zakupy</a>
+        </div>
+
+    </div>
+</div>

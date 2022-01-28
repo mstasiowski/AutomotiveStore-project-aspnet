@@ -1,0 +1,14 @@
+﻿@model ProductListView
+
+
+
+<div class="container-fluid">
+    @foreach (var p in Model.Products)
+    {
+     <partial  name="AddToCartBtn" model="p"/>
+    }
+
+
+    <div page-model="@Model.PagingNumInfo" page-action="Index" class="text-center" ></div>
+
+</div>

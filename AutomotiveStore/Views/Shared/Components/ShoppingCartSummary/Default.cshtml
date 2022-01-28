@@ -1,0 +1,21 @@
+﻿@model ShoppingCartViewModel
+
+
+@if (Model.ShoppingCart.shoppingCartItems.Count > 0 )
+{
+    <li>
+        <a asp-controller="ShoppingCart" style="text-decoration:none">
+
+            <span id="cart-status" style="color:black">
+               <b>Twój Koszyk:</b> 
+                <span style="color:forestgreen">
+                     @Model.ShoppingCart.shoppingCartItems.Count produkt(y)
+                     @Model.ShoppingCart.GetShoppingCartTotal().ToString("c")
+               </span>
+            </span>
+            <span class="fa fa-shopping-cart" style="color:black;"></span>
+
+
+        </a>
+    </li>
+}

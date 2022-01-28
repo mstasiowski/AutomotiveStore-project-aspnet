@@ -1,0 +1,55 @@
+﻿@model Order
+
+<div class="container-fluid m-3">
+    <h2>Wpisz dane do zamówienia:</h2>
+    
+    <form asp-action="Checkout" method="post" class="form-horizontal" role="form">
+        <div class="mb-3">
+            <span asp-validation-for="FirstName" class="text-danger"></span><br />
+            <label asp-for="FirstName">Imię</label>
+            <input class="form-control" asp-for="FirstName" />
+        </div>
+
+        <div class="mb-3">
+            <span asp-validation-for="LastName" class="text-danger"></span><br />
+            <label asp-for="LastName">Nazwisko</label>
+            <input class="form-control" asp-for="LastName" />
+        </div>
+
+        <div class="mb-3">
+            <span asp-validation-for="Adress" class="text-danger"></span><br />
+            <label asp-for="Adress">Adres</label>
+            <input class="form-control" asp-for="Adress" />
+        </div>
+
+        <div class="mb-3">
+            <span asp-validation-for="ZipCode" class="text-danger"></span><br />
+            <label asp-for="ZipCode">Kod pocztowy</label>
+            <input class="form-control" asp-for="ZipCode" />
+        </div>
+
+        <div class="mb-3">
+            <span asp-validation-for="State" class="text-danger"></span><br />
+            <label asp-for="State">Województwo</label>
+            <input class="form-control" asp-for="State" />
+        </div>
+
+        <div class="mb-3">
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span><br />
+            <label asp-for="PhoneNumber">Numer telefonu</label>
+            <input class="form-control" asp-for="PhoneNumber" />
+        </div>
+
+        <div class="mb-3">
+            <span asp-validation-for="Email" class="text-danger"></span><br />
+            <label asp-for="Email">Email</label>
+            <input class="form-control" asp-for="Email" />
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-success" type="submit">Złóż zamówienie</button>
+        </div>
+
+    </form>
+
+</div>
